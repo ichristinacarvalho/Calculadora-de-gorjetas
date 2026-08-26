@@ -1,0 +1,145 @@
+/* GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
+/* CORES */
+:root {
+    --cor-fundo: #fff9e6;       /* Amarelo manteiga bem clarinho */
+    --cor-card: #ffffff;        /* Cartão branco limpo */
+    --cor-texto: #2f3542;       /* Texto escuro bem legível */
+    --cor-borda: #dfe4ea;       /* Cinza suave para bordas */
+    --cor-vermelho: #ff4757;    /* Vermelho vibrante (estilo ketchup) */
+    --cor-verde: #2ed573;       /* Verde vivo (estilo alface fresca) */
+    --cor-amarelo: #ffa502;     /* Amarelo alegre para detalhes */
+    --cor-input-bg: #f1f2f6;    /* Fundo dos inputs */
+}
+
+/* BODY */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD */
+.card {
+    background-color: var(--cor-card);
+    box-shadow: 0 10px 30px rgba(47, 53, 66, 0.1);
+    border: 3px solid var(--cor-amarelo);
+    border-radius: 20px;
+    padding: 35px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* TÍTULO PRINCIPAL */
+h1 {
+    color: var(--cor-vermelho);
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/* SUBTÍTULO DO TOPO */
+.card > p {
+    color: #747d8c;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* LABELS */
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--cor-texto);
+}
+
+/* INPUTS */
+input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--cor-input-bg);
+    border: 2px solid var(--cor-borda);
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--cor-texto);
+    margin-bottom: 20px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+/* EFEITO AO CLICAR NO INPUT */
+input:focus {
+    border-color: var(--cor-amarelo);
+}
+
+/* BOTÕES */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+    margin-bottom: 10px;
+}
+
+/* BOTÃO DE CALCULAR (Vermelho Vivo) */
+button:first-of-type {
+    background-color: var(--cor-vermelho);
+    color: #ffffff;
+}
+
+/* BOTÃO DE LIMPAR (Verde Vivo) */
+button:last-of-type {
+    background-color: var(--cor-verde);
+    color: #ffffff;
+}
+
+/* EFEITO HOVER NOS BOTÕES */
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ÁREA DE RESULTADOS (SECTION) */
+section {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 2px dashed var(--cor-borda);
+}
+
+section h2 {
+    font-size: 16px;
+    color: var(--cor-texto);
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 15px;
+    text-align: left;
+    margin-bottom: 6px;
+    color: var(--cor-texto);
+}
+
+/* DESTAQUE PARA O VALOR TOTAL */
+#total {
+    font-weight: bold;
+    color: var(--cor-vermelho);
+}

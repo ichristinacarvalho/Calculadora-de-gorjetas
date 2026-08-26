@@ -1,13 +1,19 @@
 function calcular() {
 
-    //ENTRADA
-    let valor = Number(document.getElementById("valor").value);//certo
-    let porcentagem = Number(document.getElementById("porcentagem").value);//certo
+    //pega o valor bruto em formato de texto e cria uma versão numérica limpa em seguida
+    let valor = document.getElementById("valor").value;
+    let valorNum = Number(valor);
 
-    //VALIDAÇÃO
-    if (valor <= 0 || porcentagem <= 0) {
-        alert("Digite um número válido.")
-        return
+    let porcentagem = document.getElementById("porcentagem").value;
+    let porcentagemNum = Number(porcentagem);
+
+    //validação de campos vazios e negativos
+    if (valor.trim() === "" || porcentagem.trim() === "") {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    } else if(valorNum < 0  || porcentagemNum < 0){
+        alert("Os valores não podem ser negativos.");
+        return;
     }
 
     //PROCESSAMENTO
@@ -16,7 +22,7 @@ function calcular() {
     let resultado = valor + gorjeta;
 
     //SAÍDA
-    document.getElementById("conta").innerHTML = `Valor da conta: R$ ${valor.toFixed(2)}`;
+    document.getElementById("conta").innerHTML = `Valor da conta: R$ ${valorNum.toFixed(2)}`;
     document.getElementById("gorjeta").innerHTML = `Valor da gorjeta: R$ ${gorjeta.toFixed(2)}`;
     document.getElementById("total").innerHTML = `O total a pagar é: R$ ${resultado.toFixed(2)}`;
 }
